@@ -1,16 +1,20 @@
 {% extends 'CrashdBlog/base.html' %}
 
-    {% block content %}
-        <div class="row around-sm">
+{% block new_edit %}
+  {% url 'post_edit' pk=post.pk %} 
+{% endblock %}
 
-          <h1 class="encabezado col-sm-10">{{ post.title }}</h1>
-          {% if post.published_date %}
-            <p class="fecha col-sm-2">{{ post.published_date }}</p>
-          {% endif %}
+{% block content %}
+    <div class="row around-sm">
 
-          <div class="content paragraph">
-            <p>{{ post.text|linebreaks }}</p>
-          </div>
+      <h1 class="encabezado col-sm-10">{{ post.title }}</h1>
+      {% if post.published_date %}
+        <p class="fecha col-sm-2">By {{ post.author }}, on {{ post.published_date }}</p>
+      {% endif %}
 
-        </div>
-    {% endblock %}
+      <div class="content paragraph">
+        <p>{{ post.text|linebreaks }}</p>
+      </div>
+
+    </div>
+{% endblock %}

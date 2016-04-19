@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="{% static 'css/titles_master.css'%}">
   <link rel="stylesheet" href="{% static 'css/titles_blog.css'%}">
   <link rel="stylesheet" href="{% static 'css/extra/fixed_menu.css'%}">
+  <link rel="stylesheet" href="{% static 'css/extra/buttons.css'%}">
 
   <title>CrashdBlog</title>
 
@@ -23,8 +24,9 @@
 
   <div class="nav">
     <header class="row around-sm head">
-      <h2 class="titulo col-sm-10">CrashdSystem's Blog</h2>
+      <h2 class="titulo col-sm-9">CrashdSystem's Blog</h2>
       <h4 class="subtitulo col-sm-2">By Crash</h4>
+      <a  class="subtitulo col-sm-1" href="{% block new_edit %} {% endblock %}"><span class="icon-edit"></span></a>
     </header>
   </div>
 

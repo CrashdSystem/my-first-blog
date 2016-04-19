@@ -1,11 +1,15 @@
 {% extends 'CrashdBlog/base.html' %}
 
+{% block new_edit %}
+  {% url 'CrashdBlog.views.post_new' %}
+{% endblock %}
+
 {% block content %}
   {% for post in posts %}
 
   <div class="row around-sm">
     <h1 class="encabezado col-sm-10"><a a href="{% url 'CrashdBlog.views.post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-    <p class="fecha col-sm-2">{{ post.published_date }}</p>
+    <p class="fecha col-sm-2">By {{ post.author }}, on {{ post.published_date }}</p>
 
     <div class="content paragraph">
       <p>{{ post.text|linebreaks }}</p>

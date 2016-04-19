@@ -1,0 +1,39 @@
+.button {
+  border: 0px;
+  background: #3498db;
+  color: #ecf0f1;
+  display: inline-block;
+  font-size: 1.5em;
+  margin: 20px;
+  padding: 10px 0px;
+  text-align: center;
+  width: 18%;
+  text-decoration: none;
+  box-shadow: 0px 3px 0px #2980b9;
+  -webkit-transition:all 500ms ease;
+  -o-transition:all 500ms ease;
+  transition:all 500ms ease;
+
+}
+
+.button.span {
+  margin-right: 0.3em;
+}
+
+/* back COLORS*/
+
+.button.green {
+	background: #1abc9c;
+	box-shadow: 0px 3px 0px #16a085;
+}
+
+/*EFFECTS*/
+
+.button.radius{
+  border-radius: 50px;
+}
+.button:hover{
+  background: #221c1e;
+  box-shadow: 0px 0px 0px;
+	cursor: pointer;
+}

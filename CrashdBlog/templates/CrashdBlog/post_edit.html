@@ -1,0 +1,16 @@
+{% extends 'CrashdBlog/base.html' %}
+
+{% block new_edit %}
+  {% url 'CrashdBlog.views.post_new' %}
+{% endblock %}
+
+    {% block content %}
+        <h1 class="encabezado">New post</h1>
+        <div class="row">
+
+        <form method="POST" class="col-xs-12 post-form">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="button"><span class="icon-save"></span>Save</button>
+        </form>
+      </div>
+    {% endblock %}
