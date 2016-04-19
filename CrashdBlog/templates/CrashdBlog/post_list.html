@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>CrashdBlog</title>
-</head>
-<body>
-  <header>
-    <h2>CrashdSystem's Blog</h2>
-    <h4>By Crash</h4>
-  </header>
+{% extends 'CrashdBlog/base.html' %}
 
+{% block content %}
   {% for post in posts %}
-        <div>
-            <p>published: {{ post.published_date }}</p>
-            <h1><a href="">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaks }}</p>
-        </div>
-    {% endfor %}
 
+  <div class="row around-sm">
+    <h1 class="encabezado col-sm-10"><a a href="{% url 'CrashdBlog.views.post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+    <p class="fecha col-sm-2">{{ post.published_date }}</p>
 
-</body>
-</html>
+    <div class="content paragraph">
+      <p>{{ post.text|linebreaks }}</p>
+    </div>
+
+  </div>
+
+  {% endfor %}
+{% endblock content %}

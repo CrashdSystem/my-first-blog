@@ -1,0 +1,37 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta charset="UTF-8">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300|Sorts+Mill+Goudy:400italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{% static 'css/style.css'%}">
+  <link rel="stylesheet" href="{% static 'css/flexboxgrid.min.css'%}">
+  <link rel="stylesheet" href="{% static 'css/format_master.css'%}">
+  <link rel="stylesheet" href="{% static 'css/format_blog.css'%}">
+  <link rel="stylesheet" href="{% static 'css/settings_master.css'%}">
+  <link rel="stylesheet" href="{% static 'css/settings_blog.css'%}">
+  <link rel="stylesheet" href="{% static 'css/titles_master.css'%}">
+  <link rel="stylesheet" href="{% static 'css/titles_blog.css'%}">
+  <link rel="stylesheet" href="{% static 'css/extra/fixed_menu.css'%}">
+
+  <title>CrashdBlog</title>
+
+</head>
+<body>
+
+  <div class="nav">
+    <header class="row around-sm head">
+      <h2 class="titulo col-sm-10">CrashdSystem's Blog</h2>
+      <h4 class="subtitulo col-sm-2">By Crash</h4>
+    </header>
+  </div>
+
+  <section class="content wrapper">
+    {% block content %}
+    {% endblock %}
+  </section>
+
+</body>
+</html>
